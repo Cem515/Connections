@@ -1,0 +1,22 @@
+{
+  "name": "collin",
+  "description": "message",
+  "main": "gulpfile.js",
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.6",
+    "angular-ui-router": "^1.0.6",
+    "sweetalert": "^1.1.3"
+  },
+  "authors": [
+    "Collin McCoy <collinmccoy17@gmail.com>"
+  ]
+}
