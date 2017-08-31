@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"  ng-app="app">
 <head>
   <meta charset="UTF-8">
   <title>Gulp Demo</title>
@@ -11,7 +11,7 @@
 <!-- endinject -->
 </head>
 
-<body>
+<body ng-controller="MessageController as MsgCtrl">
 <!-- bower:js -->
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
@@ -21,8 +21,14 @@
 <script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
 
 <p>Messanger App for Demo</p>
-
+<label>Username
+<input class='form-control' ng-model="MsgCtrl.CredObject.username"></input>
+</label>
+<label>Password
+  <input class='form-control' ng-model="MsgCtrl.CredObject.password"></input>
+</label>
 <!-- inject:js -->
+<script src="/app/app.js"></script>
 <!-- endinject -->
 </body>
 </html>
