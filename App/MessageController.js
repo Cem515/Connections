@@ -5,14 +5,26 @@
         .module('app')
         .controller('MessageController', MessageController)
 
-    MessageController.$inject = ['$location'];
+    MessageController.$inject = ['$location','MessageFactory'];
 
-    function MessageController($location) {
+    function MessageController($location, MessageFactory) {
         /* jshint validthis:true */
-        var vm = this;
+        var MsgCtrl = this;
+        MsgCtrl.CredObject.username = ""
+        MsgCtrl.CredObject.password = ""
+        MsgCtrl.CredObject ={}
 
-        activate();
 
-        function activate() { }
+
+        MsgCtrl.login = function(creds) {
+            MessageFactory
+            .login(creds)
+            .then(function(rec) {
+
+            }, function(error){
+                SweetAlert.swal("Error");
+            })
+            
+        }
     }
 })();
