@@ -10,7 +10,8 @@
     function MessageFactory($http, localApi) {
         var service = {
            login: login,
-           sendMsg: sendMsg
+           register:register,
+          // sendMsg: sendMsg
         };
 
         return service;
@@ -23,6 +24,18 @@
             }).then(function(response){
                 return response
             }, function (error){
+                return error;
+            })
+         }
+
+         function register(creds) {
+
+            return $http({
+             method:'POST',
+             url:localApi
+            }).then(function(response){
+                return response
+            }, function(error){
                 return error;
             })
          }

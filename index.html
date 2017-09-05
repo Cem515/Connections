@@ -27,9 +27,13 @@
 <label>Password
   <input class='form-control' ng-model="MsgCtrl.CredObject.password"></input>
 </label>
+<input class='form-control' ng-model="MsgCtrl.CredObject.email" ng-show="MsgCtrl.Register"></input>
+<input id="checkBox" type="checkbox" ng-model="MsgCtrl.user">New User?</input>
 <button ng-click="MsgCtrl.login" type="default"/>
 <!-- inject:js -->
 <script src="/app/app.js"></script>
+<script src="/app/message.factory.js"></script>
+<script src="/app/MessageController.js"></script>
 <!-- endinject -->
 </body>
 </html>
