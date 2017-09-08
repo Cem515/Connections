@@ -30,7 +30,7 @@
 <input class='form-control' ng-model="MsgCtrl.CredObject.email" ng-show="MsgCtrl.Register"></input>
 <input id="checkBox" type="checkbox" ng-model="MsgCtrl.user">New User?</input>
 <button ng-click="MsgCtrl.login" type="default"/>
-<ul>
+<ul ng-repeat="messages in MsgCtrl.MessageHistory">
   <li></li>
 </ul>
 <!-- inject:js -->
