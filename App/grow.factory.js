@@ -3,11 +3,11 @@
 
     angular
         .module('app')
-        .factory('MessageFactory', MessageFactory)
+        .factory('GrowFactory', GrowFactory)
 
-    MessageFactory.$inject = ['$http','localApi'];
+        GrowFactory.$inject = ['$http','localApi'];
 
-    function MessageFactory($http, localApi) {
+    function GrowFactory($http, localApi) {
         var service = {
            login: login,
            register:register,

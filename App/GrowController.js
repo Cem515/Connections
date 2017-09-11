@@ -7,22 +7,22 @@
 
     MessageController.$inject = ['$location','MessageFactory'];
 
-    function MessageController($location, MessageFactory) {
+    function GrowController($location, MessageFactory) {
         /* jshint validthis:true */
-        var MsgCtrl = this;
+        var GrowCtrl = this;
         
-        MsgCtrl.CredObject.username = "";
-        MsgCtrl.CredObject.password = "";
-        MsgCtrl.CredObject.email="";
-        MsgCtrl.CredObject ={};
-        MsgCtrl.user= true;
-        MsgCtrl.Register= !MsgCtrl.user;
+        GrowCtrl.CredObject.username = "";
+        GrowCtrl.CredObject.password = "";
+        GrowCtrl.CredObject.email="";
+        GrowCtrl.CredObject ={};
+        GrowCtrl.user= true;
+        GrowCtrl.Register= !MsgCtrl.user;
 
 
 
-        MsgCtrl.login = function(creds) {
-            if(MsgCtrl.user = true){
-            MessageFactory
+        GrowCtrl.login = function(creds) {
+            if(GrowCtrl.user = true){
+                GrowFactory
             .login(creds)
             .then(function(rec) {
 
@@ -30,7 +30,7 @@
                 SweetAlert.swal("Error");
             })
         } else {
-            MessageFactory
+            GrowFactory
             .login(creds)
             .then(function(rec) {
 

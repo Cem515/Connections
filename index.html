@@ -2,7 +2,7 @@
 <html lang="en"  ng-app="app">
 <head>
   <meta charset="UTF-8">
-  <title>Gulp Demo</title>
+  <title>GrowGram</title>
 <!-- bower:css -->
 <link rel="stylesheet" href="bower_components/sweetalert/dist/sweetalert.css" />
 <!-- endbower -->
@@ -11,7 +11,7 @@
 <!-- endinject -->
 </head>
 
-<body ng-controller="MessageController as MsgCtrl">
+<body ng-controller="GrowController as GrowCtrl">
 <!-- bower:js -->
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
@@ -20,23 +20,23 @@
 <script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
 
-<p>Messanger App for Demo</p>
+<h1>Join the Grow-Gram</h1>
 <label>Username
-<input class='form-control' ng-model="MsgCtrl.CredObject.username"></input>
+<input class='form-control' ng-model="GrowCtrl.CredObject.username"></input>
 </label>
 <label>Password
-  <input class='form-control' ng-model="MsgCtrl.CredObject.password"></input>
+  <input class='form-control' ng-model="GrowCtrl.CredObject.password"></input>
 </label>
-<input class='form-control' ng-model="MsgCtrl.CredObject.email" ng-show="MsgCtrl.Register"></input>
-<input id="checkBox" type="checkbox" ng-model="MsgCtrl.user">New User?</input>
-<button ng-click="MsgCtrl.login" type="default"/>
-<ul ng-repeat="messages in MsgCtrl.MessageHistory">
+<input class='form-control' ng-model="GrowCtrl.CredObject.email" ng-show="GrowCtrl.Register"></input>
+<input id="checkBox" type="checkbox" ng-model="GrowCtrl.user">New User?</input>
+<button ng-click="GrowCtrl.login" type="default"/>
+<ul ng-repeat="messages in GrowCtrl.MessageHistory">
   <li></li>
 </ul>
 <!-- inject:js -->
 <script src="/app/app.js"></script>
-<script src="/app/message.factory.js"></script>
-<script src="/app/MessageController.js"></script>
+<script src="/app/grow.factory.js"></script>
+<script src="/app/GrowController.js"></script>
 <!-- endinject -->
 </body>
 </html>
