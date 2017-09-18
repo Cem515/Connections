@@ -9,7 +9,8 @@
 
     function UserFactory($http) {
         var service = {
-            getData: getData
+            login: login,
+            signup: signup
         };
 
         return service;
