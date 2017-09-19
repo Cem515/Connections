@@ -16,18 +16,6 @@
 
         return service;
 
-        function login(creds) {
- 
-            return $http({
-                method: 'GET',
-                url:localApi+''+creds
-            }).then(function(response){
-                return response
-            }, function (error){
-                return error;
-            })
-         }
-
          function register(creds) {
 
             return $http({
