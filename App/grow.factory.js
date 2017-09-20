@@ -27,5 +27,17 @@
                 return error;
             })
          }
+
+         function login(creds) {
+            
+                        return $http({
+                         method:'GET',
+                         url:localApi
+                        }).then(function(response){
+                            return response
+                        }, function(error){
+                            return error;
+                        })
+                     }
     }
 })();
