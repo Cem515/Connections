@@ -11,7 +11,6 @@
         var service = {
            login: login,
            register:register,
-          // sendMsg: sendMsg
         };
 
         return service;
