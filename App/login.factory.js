@@ -27,6 +27,16 @@
                        })
                     }
 
-        function getData() { }
+        function getData() {
+            return $http({
+                method: 'GET',
+                url:localApi+''+creds
+            }).then(function(response){
+                return response
+            }, function (error){
+                return error;
+            })
+         }
+         }
     }
 })();
